@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.apporiotaxi.techbangla.coinconvert.activity.MainActivity">
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/select_convert"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+            android:id="@+id/coin2coin"
+            android:theme="@style/MyRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coin To Coin"/>
+            <RadioButton
+                android:id="@+id/money2coin"
+                android:theme="@style/MyRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Money To Coin"/>
+            <RadioButton
+                android:id="@+id/coin2money"
+                android:theme="@style/MyRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coin To Money"/>
+        </RadioGroup>
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/select_text"
+            android:layout_below="@id/select_convert"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="From"
+                android:textSize="16sp"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/fromSpinner"
+                android:layout_marginLeft="16sp"
+                android:layout_marginRight="16sp"
+                app:ms_background_color="@color/colorPrimary"
+                app:ms_text_color="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="To"
+                android:textSize="16sp"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/toSpinner"
+                android:layout_marginLeft="16sp"
+                android:layout_marginRight="16sp"
+                app:ms_background_color="@color/colorPrimary"
+                app:ms_text_color="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+       <Button
+           android:id="@+id/btnConvert"
+           android:text="Convert"
+           android:layout_below="@id/select_text"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+        <android.support.v7.widget.CardView
+            android:layout_below="@+id/btnConvert"
+            android:padding="8dp"
+            app:cardElevation="4dp"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <LinearLayout
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/coinImage"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+           />
+
+        <TextView
+           android:id="@+id/toTextView"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"
+            android:layout_width="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="9"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>
